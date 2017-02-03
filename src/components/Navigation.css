@@ -1,0 +1,41 @@
+.Navigation {
+  margin: 40px 0 80px;
+}
+
+.Navigation__link {
+  position: relative;
+
+  display: inline-block;
+
+  opacity: 1;
+
+  transition: opacity 300ms ease-out;
+  transition-delay: 300ms;
+}
+
+.Navigation__link--active {
+  color: #333333;
+}
+
+.Navigation__link--active::after {
+  display: inline-block;
+
+  margin-left: 10px;
+
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  content: "\f00c";
+}
+
+.Navigation__link--home.Navigation__link--active {
+  opacity: 0;
+
+  cursor: default;
+
+  transition: opacity 300ms ease-in;
+  transition-delay: 300ms;
+}
